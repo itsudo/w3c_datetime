@@ -28,6 +28,14 @@ describe W3cDatetime do
     W3cDatetime::parse('2013-02-10T10:10:20').must_equal Time.new(2013,02,10,10,10,20)
   end
 
+  it "parses date with time and timezone" do
+    W3cDatetime::parse('2013-02-10T10:10:20+10:00').must_equal Time.new(2013,02,10,10,10,20, '+10:00')
+  end
+
+  it "parses date with time and Zulu offset" do
+    W3cDatetime::parse('2013-02-10T10:10:20Z').must_equal Time.new(2013,02,10,10,10,20, '+00:00')
+  end
+
   it "parses date with time and miliseconds" do
     W3cDatetime::parse('2013-02-10T10:10:20.30').must_equal Time.new(2013,02,10,10,10,20)
   end
@@ -42,5 +50,9 @@ describe W3cDatetime do
 
   it "parses date with time and miliseconds and offset" do
     W3cDatetime::parse('2013-02-10T10:10:10.30+10:30').must_equal Time.new(2013,02,10,10,10,10,'+10:30')
+  end
+
+  it "parses date with time and miliseconds and Zulu offset" do
+    W3cDatetime::parse('2013-02-10T10:10:10.30Z').must_equal Time.new(2013,02,10,10,10,10,'+00:00')
   end
 end
