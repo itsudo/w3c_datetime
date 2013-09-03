@@ -1,8 +1,22 @@
-# W3cDatetime
+# [W3cDatetime](https://github.com/itsudo/w3c_datetime)
 
 [![Build Status](https://travis-ci.org/itsudo/w3c_datetime.png)](https://travis-ci.org/itsudo/w3c_datetime)
 
 Parses and outputs date and time according to [W3C date and time formats](http://www.w3.org/TR/NOTE-datetime)
+
+## Installation
+
+Add this line to your application's Gemfile:
+
+    gem 'w3c_datetime'
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install w3c_datetime
 
 ## Usage
 
@@ -17,6 +31,10 @@ Please see tests for detailed usage.
 ## TODO
 
  * Format ruby date object
+
+## Authors
+
+ * [Michal Pawlowski](http://cv.misza.co.uk)
 
 ## Contributing
 
