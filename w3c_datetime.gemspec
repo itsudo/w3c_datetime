@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name        = 'w3c_datetime'
-  spec.version     = '0.0.1'
+  spec.version     = '0.0.2'
   spec.summary     = "Deal with date and time in w3c format"
   spec.authors     = ["Michal Pawlowski"]
   spec.email       = 'misza@misza.co.uk'
