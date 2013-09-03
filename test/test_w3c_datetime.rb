@@ -3,6 +3,19 @@ require 'minitest/autorun'
 require 'w3c_datetime'
 
 describe W3cDatetime do
+  it "does not parse rubbish" do
+    W3cDatetime::parse('ala ma kota').must_be_nil
+    W3cDatetime::parse('2012-03-20 ala ma kota').must_be_nil
+    W3cDatetime::parse('sth stupid2012-03-20').must_be_nil
+    W3cDatetime::parse('2012-03-20T99:00:99').must_be_nil
+    W3cDatetime::parse('2012-13-20').must_be_nil
+    W3cDatetime::parse('2012-12-20T10:10+25:00').must_be_nil
+  end
+
+  it "returns Time object" do
+    W3cDatetime::parse('2013-02-10').must_be_instance_of Time
+  end
+
   it "parses date" do
     W3cDatetime::parse('2013-02-10').must_equal Time.new(2013,02,10)
   end
