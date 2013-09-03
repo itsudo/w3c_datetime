@@ -1,5 +1,7 @@
 # W3cDatetime
 
+[![Build Status](https://travis-ci.org/itsudo/w3c_datetime.png)](https://travis-ci.org/itsudo/w3c_datetime)
+
 Parses and outputs date and time according to [W3C date and time formats](http://www.w3.org/TR/NOTE-datetime)
 
 ## Usage
