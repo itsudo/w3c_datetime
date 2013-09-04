@@ -20,17 +20,21 @@ Or install it yourself as:
 
 ## Usage
 
+Parse string and get back Time or nil:
+
     W3cDatetime::parse('2013-04-10T10:10')
 
     W3cDatetime::parse('2013-03-11')
 
     W3cDatetime::parse('1997-07-16T19:20:30.45+01:00')
 
+To get string representation of time just call to_w3c_datetime on Time object:
+
+    Time.new.to_w3c_datetime
+
 Please see tests for detailed usage.
 
 ## TODO
-
- * Format ruby date object
 
 ## Authors
 
